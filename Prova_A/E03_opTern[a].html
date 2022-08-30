@@ -11,11 +11,16 @@
     //Calcule os pontos e apresente o nível de complexidade do programa
 
     //ENTRADA
-
-
+const qtdLinhas = Number(prompt("Quantas linhas o programa possui?: "));
+const qtdIfelse = Number(prompt("Quantos If-else possui?: "));
+const qtdIfternario = Number(prompt("Quantos If-operador ternário?: "));
+let resultadoNaTela;
     //PROCESSAMENTO
-
+const totalPontos = qtdLinhas  + (qtdIfelse * 2) + (qtdIfternario * 3);
 
     //SAÍDA
+resultadoNaTela = (totalPontos <= 25) ? "CALOURO" : "VETERANO";
+
+document.write(resultadoNaTela);
 
 </script>

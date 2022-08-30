@@ -10,11 +10,22 @@
     //Apresente o valor final do veículo, considerando o juro estabelecido para a quantidade de parcelas.
 
     //ENTRADA
-
-
+const valorVeiculo = parseInt(prompt("Informe o valor do veiculo: "));
+const qtdParcelas = parseInt(prompt("Informe a quantidade de parcelas que deseja finaciar: "));
+let resultadoNaTela;
     //PROCESSAMENTO
-
+const ate12Parcelas = valorVeiculo + ((valorVeiculo / 100) * 5);
+const ate24Parcelas = valorVeiculo + ((valorVeiculo / 100) * 10);
+const maior24Parcelas = valorVeiculo + ((valorVeiculo / 100) * 20);
 
     //SAÍDA
+(qtdParcelas <= 12 ) ? resultadoNaTela = `Preço com juros: ${ate12Parcelas.toFixed(2)}$`
+: (qtdParcelas <= 24) ? resultadoNaTela = `Preço com juros: ${ate12Parcelas.toFixed(2)}$`
+: resultadoNaTela = `Preço com juros: ${maior24Parcelas.toFixed(2)}$`;
+
+
+document.write(resultadoNaTela);
+
+
 
 </script>

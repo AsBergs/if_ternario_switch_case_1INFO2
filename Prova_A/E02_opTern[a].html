@@ -9,11 +9,23 @@
     //Apresente a situação final do aluno
 
     //ENTRADA
-
-
+const nota1 = parseInt(prompt("Informe a nota do 1 trimestre:  "));
+const nota2 = parseInt(prompt("Informe a nota do 2 trimestre:  "));
+const nota3 = parseInt(prompt("Informe a nota do 3 trimestre:  "));
+let resultadoNaTela
     //PROCESSAMENTO
 
-
+const media = (nota1 + nota2 + nota3) / 3;
     //SAÍDA
+(media <= 4) ? resultadoNaTela = `REPROVADO` 
+    
+   : (media <= 6) ? resultadoNaTela = `EXAME`
+: resultadoNaTela = `APROVADO`;
+
+ 
+
+
+
+document.write(resultadoNaTela);
 
 </script>

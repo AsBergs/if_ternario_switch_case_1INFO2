@@ -1,20 +1,37 @@
 <script>
-    //SWITCH CASE SWITCH CASE SWITCH CASE
+  //SWITCH CASE SWITCH CASE SWITCH CASE
 
-    //PROBLEMA: Aplicar desconto no preço da venda
-    //Peça para o vendedor informar o valor total da venda e também informar o Tipo do Cliente, considerando o seguinte cenário:
-    //Cliente Comum (Use código 1) tem 1% (1/100) de desconto.
-    //Cliente VIP (Use código 2) tem 5% (5/100) de desconto.
-    //Funcionário (Use código 3) tem 10% (10/100) de desconto.
-    
-    //Calcule e apresente o preço final da venda de acordo com o Tipo do Cliente
+  //PROBLEMA: Aplicar desconto no preço da venda
+  //Peça para o vendedor informar o valor total da venda e também informar o Tipo do Cliente, considerando o seguinte cenário:
+  //Cliente Comum (Use código 1) tem 1% (1/100) de desconto.
+  //Cliente VIP (Use código 2) tem 5% (5/100) de desconto.
+  //Funcionário (Use código 3) tem 10% (10/100) de desconto.
 
-    //ENTRADA
+  //Calcule e apresente o preço final da venda de acordo com o Tipo do Cliente
 
+  //ENTRADA
+  const totalVenda = parseInt(prompt("Informe o valor da compra: "));
+  const tipoCliente = Number(prompt("Qua o tipo do cliente (Cliente Comum-Código 1, Cliente VIP-Código 2 e Funcionário- Código 3)"
+  ));
+  let resultadoNaTela;
+  //PROCESSAMENTO
+  const preçoComum = totalVenda - ((totalVenda / 100) * 1);
+  const preçoVip = totalVenda - ((totalVenda / 100) * 5);
+  const preçoFuncionario = totalVenda - ((totalVenda / 100) * 10) ;
+  //SAÍDA
+  switch (tipoCliente) {
+    case 1:
+      resultadoNaTela = `O preço final é de ${preçoComum}$`;
 
-    //PROCESSAMENTO
+      break;
 
+    case 2:
+      resultadoNaTela = `O preço final é de ${preçoVip}$`;
+      break;
+    case 3:
+      resultadoNaTela = `O preço final é de ${preçoFuncionario}$`;
+      break;
+  }
 
-    //SAÍDA
-
+  document.write(resultadoNaTela);
 </script>
